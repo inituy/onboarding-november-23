@@ -44,7 +44,8 @@ describe('registerUser', function () {
       name: 'supersupersupersuperlargo' + Math.random().toString(),
     };
     registerUser(deps, payload)
-      .then(function () {
+      .then(function (result) {
+        expect(result).toEqual({});
         expect(deps.saveUser.params[0]).toEqual({
           name: payload.name,
           lastName: payload.lastName,

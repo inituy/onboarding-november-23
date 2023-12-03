@@ -34,4 +34,8 @@ module.exports = function registerUser(deps, payload) {
       });
     })
 
+    .then(function () {
+      return {};
+    })
+
 };
